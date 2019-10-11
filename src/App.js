@@ -21,14 +21,14 @@ import {
 			  }
 			}
 			getDataFromAPI=()=>{
-			  fetch("http://localhost:8080/companies")
+			  fetch("https://powerful-tor-71755.herokuapp.com/companies")
 			  .then((response) => response.json())
 			  .then((response)=> {
 			    this.setState ({companies : response });
 			  });
 			}
 			getTrueFromAPI=()=>{
-				fetch("http://localhost:8080/companies/isecofriendly?hasEnvironmentProgram=true")
+				fetch("https://powerful-tor-71755.herokuapp.com/companies/isecofriendly?hasEnvironmentProgram=true")
 				.then((response) => response.json())
 				.then((response)=> {
 					this.setState ({companies : response });
