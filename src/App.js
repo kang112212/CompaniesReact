@@ -21,14 +21,14 @@ import {
 			  }
 			}
 			getDataFromAPI=()=>{
-			  fetch("https://powerful-tor-71755.herokuapp.com/companies")
+			  fetch("https://powerful-tor-71755.herokuapp.com/companies/")
 			  .then((response) => response.json())
 			  .then((response)=> {
 			    this.setState ({companies : response });
 			  });
 			}
 			getTrueFromAPI=()=>{
-				fetch("https://powerful-tor-71755.herokuapp.com/companies/isecofriendly?hasEnvironmentProgram=true")
+				fetch("https://powerful-tor-71755.herokuapp.com/companies/isecofriendly?hasEnvironmentProgram=true/")
 				.then((response) => response.json())
 				.then((response)=> {
 					this.setState ({companies : response });
