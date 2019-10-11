@@ -6,9 +6,6 @@ class UpdateForm extends React.Component{
   constructor(props, companies){
     super(props, companies);
 
-
-
-
     this.state={
       name:"",
       eco:false,
@@ -40,7 +37,7 @@ class UpdateForm extends React.Component{
   }
 
   updateClick = () => {
-    fetch('https://powerful-tor-71755.herokuapp.com/company/' + this.props.match.params.id, {
+    fetch('https://powerful-tor-71755.herokuapp.com/company/update/' + this.props.match.params.id, {
       method: 'put',
       headers: {
         "Content-Type": "application/json"
