@@ -24,7 +24,7 @@ class StoredCompanies extends React.Component {
   					<ul id="list">
   			      <li className="listEntry">Name:<span> {company.name}</span></li>
   			      <li className="listEntry">Industry  Type:<span> {company.industryType}</span></li>
-  			      <li className="listEntry">Has Environmental Program:<span> {company.hasEnvironmentProgram.toString()}</span></li>
+  			      <li className="listEntry">Has Environmental Program:<span> {company.hasEnvironmentProgram}</span></li>
   			      <li className="listEntry">Ownership Structure:<span>  {company.ownershipStructure}</span></li>
   			      <li className="listEntry">Glassdoor Rating:<span> {company.glassdoorRating}</span></li>
   			      <li className="listEntry">Personal Rating:<span> {company.oneToTenRating}</span></li>
