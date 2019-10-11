@@ -1,0 +1,121 @@
+body {
+  background-color: #2F4454 !important;
+}
+#newEntry {
+padding-top: 30px;
+display: flex;
+flex-wrap: wrap;
+margin: auto;
+justify-content: center;
+}
+
+#updateEntry{
+display: block;
+text-align: center;
+margin-top: 30px;
+color: #DEF2F1;
+font-family: 'Open Sans', sans-serif;
+font-weight: 600;
+list-style: none;
+}
+
+li span {
+  color: white;
+}
+
+.inputBox {
+  display: flex;
+  margin: 10px auto;
+  border-radius: 3px;
+  text-align: center;
+  min-height: 9vh;
+  min-width: 70vw;
+  background-color: #376e6f;
+  color: white;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.listEntry {
+  margin-top: 5px;
+  border-radius: 3px;
+}
+
+
+#listOuter {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#botNav {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+}
+
+
+#awayFromNav {
+  padding-top: 100px;
+
+}
+
+.sortingButtons {
+  border-radius: 3px;
+  display: flex;
+ justify-content: center;
+}
+
+.sortingButtons button {
+  background-color: #376e6f;
+  border-color: black;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 0px 10px 5px;
+  font-size: 12px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  color: #DEF2F1;
+}
+.sortingButtons button:hover {
+  background-color: #5085a5;
+}
+
+.functionalButtons {
+  background-color: #376e6f;
+  border-color: black;
+  border-radius: 5px;
+  padding: 2px 5px;
+  margin: 10px 5px 0;
+  font-size: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  color: #DEF2F1;
+}
+.functionalButtons:hover {
+  background-color: #5085a5;
+}
+
+.move{
+  margin-top: 100px;
+}
+
+#outputDisplayBoxes {
+    border: 3px solid black;
+    border-radius: 10px;
+    min-width: 33vw;
+    min-height: 33vh;
+    overflow: scroll;
+    margin: 5px auto;
+    padding: 0 15px 0 0;
+}
+#list li {
+  color: #DEF2F1;
+  font-weight: 600;
+  list-style: none;
+}
+
+/* Fix Link tag underline w/o inline */
+a {
+  text-decoration: none;
+  color: #DEF2F1;
+}
