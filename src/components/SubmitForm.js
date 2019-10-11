@@ -33,7 +33,7 @@ class SubmitForm extends React.Component{
     this.setState({personalRating: e.target.value});
   }
 submitClick = () => {
-  fetch('https://powerful-tor-71755.herokuapp.com', {
+  fetch('https://powerful-tor-71755.herokuapp.com/companies', {
     method: 'post',
     headers: {
       "Content-Type": "application/json"
