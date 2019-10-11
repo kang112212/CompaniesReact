@@ -13,7 +13,7 @@ class ShowCompany extends React.Component{
 
   componentDidMount(){
    // const { id } = this.props.match.params.id;
-   fetch("http://localhost:8080/companies/" + this.props.match.params.id)
+   fetch("https://powerful-tor-71755.herokuapp.com/companies/" + this.props.match.params.id)
      .then((response) => response.json())
      .then((response)=> {
       this.setState ({companies : response });

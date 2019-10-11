@@ -8,7 +8,7 @@ import DragulaStyles from 'react-dragula/dist/dragula.min.css';
 class StoredCompanies extends React.Component {
 
   companyHandleClick=(id)=>{
-    fetch('http://localhost:8080/company/' + id, {
+    fetch('https://powerful-tor-71755.herokuapp.com/company/' + id, {
       method: 'delete',
       headers: {
         "Content-Type": "application/json"
