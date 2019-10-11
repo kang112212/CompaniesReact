@@ -40,7 +40,7 @@ class UpdateForm extends React.Component{
   }
 
   updateClick = () => {
-    fetch('https://powerful-tor-71755.herokuapp.com' + this.props.match.params.id, {
+    fetch('https://powerful-tor-71755.herokuapp.com/companies' + this.props.match.params.id, {
       method: 'put',
       headers: {
         "Content-Type": "application/json"
