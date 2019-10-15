@@ -7,9 +7,14 @@ constructor(props, getDataFromAPI){
   super();
 }
 
+
+
+
   render(){
 		return (
+      <div>
   			<SubmitForm {...this.props} getDataFromAPI={this.props.getDataFromAPI} />
+      </div>
 		)
 	}
 }

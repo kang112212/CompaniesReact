@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function SimpleBottomNavigation() {
+export default function BotNavBar() {
   const classes = useStyles()
   const [value, setValue] = React.useState('folder');
 
@@ -21,21 +21,18 @@ export default function SimpleBottomNavigation() {
   }
 
 return (
-  <div id="awayFromNav">
+  <div id="moveUpFromBotNav">
     <BottomNavigation
       id="botNav"
       value={value} onChange={handleChange}
       showLabels
       className={classes.root} >
 
-      <BottomNavigationAction className={classes.root} label="Submit Company" value="folder" icon={<BusinessIcon />}  component={Link} to="/company" />
-
+      <BottomNavigationAction className={classes.root} label="Submit Company" value="folder" icon={<BusinessIcon  />}  component={Link} to="/company" />
 
       <BottomNavigationAction className={classes.root} label="Companies" value="storage" icon={<ViewListIcon />}  component={Link} to="/companies" />
 
     </BottomNavigation>
-
-
   </div>
   )
 }

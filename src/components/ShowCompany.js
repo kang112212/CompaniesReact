@@ -7,9 +7,7 @@ class ShowCompany extends React.Component{
     this.state= {
       companies : {}
     }
-
   }
-
 
   componentDidMount(){
    // const { id } = this.props.match.params.id;
@@ -18,23 +16,18 @@ class ShowCompany extends React.Component{
      .then((response)=> {
       this.setState ({companies : response });
       console.log(this.state.companies.hasEnvironmentProgram)
-   })
-}
+    });
+  }
   render(){
-
-
     return(
-
-      <ul id="updateEntry">
+      <ul id="companyEntry">
         <li>Name:<span> {this.state.companies.name}</span></li>
         <li>Industry  Type:<span> {this.state.companies.industryType}</span></li>
         <li>Has Environmental Program:<span> {this.state.companies.hasEnvironmentProgram}</span></li>
         <li>Ownership Structure:<span> {this.state.companies.ownershipStructure}</span></li>
         <li>Glassdoor Rating:<span> {this.state.companies.glassdoorRating}</span></li>
         <li>Personal Rating:<span> {this.state.companies.oneToTenRating}</span></li>
-        </ul>
-
-
+      </ul>
     )
   }
 }

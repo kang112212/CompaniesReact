@@ -21,7 +21,7 @@ class StoredCompanies extends React.Component {
       let companiesArr = this.props.companies.map((company)=>{
         return(
           <div key={company.id}  id="outputDisplayBoxes">
-  					<ul id="list">
+  					<ul id="companyEntry">
   			      <li className="listEntry">Name:<span> {company.name}</span></li>
   			      <li className="listEntry">Industry  Type:<span> {company.industryType}</span></li>
   			      <li className="listEntry">Has Environmental Program:<span> {company.hasEnvironmentProgram.toString()}</span></li>
@@ -41,7 +41,7 @@ class StoredCompanies extends React.Component {
       return(
           <div>
           	<SortButtons getTrueFromAPI={this.props.getTrueFromAPI} getDataFromAPI={this.props.getDataFromAPI} />
-      			<div id="listOuter" className='container' ref={this.dragulaDecorator}>{companiesArr}</div>
+      			<div id="listStructure" className='container' ref={this.dragulaDecorator}>{companiesArr}</div>
           </div>
 
 

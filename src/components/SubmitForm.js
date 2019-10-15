@@ -52,7 +52,7 @@ submitClick = () => {
 };
   render(){
     return(
-      <div id="newEntry">
+      <div id="submitEntry">
         <div>
           <input className="inputBox" onInput={this.onNameInput} placeholder="Name of Company" />
           <input list="eco" className="inputBox" onInput={this.onEcoInput} placeholder="Eco Programs?" />

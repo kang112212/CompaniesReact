@@ -1,9 +1,10 @@
 import React from 'react';
 import Header from './components/Layouts/Header';
-import Navbar from './components/Layouts/Navbar';
-import UpdateCompany from './components/Pages/UpdatePage';
-import SubmitCompany from './components/Pages/SubmitPage';
-import StoredCompanies from './components/Pages/StoragePage';
+import BotNavBar from './components/Layouts/BotNavBar';
+import UpdateCompany from './components/Pages/UpdateCompany';
+import SubmitCompany from './components/Pages/SubmitCompany';
+import StoredCompanies from './components/Pages/StoredCompanies';
+
 
 
 
@@ -49,7 +50,7 @@ import {
 				<Route
 					exact
 					path="/company"
-					render={ props => <SubmitCompany {...props} getDataFromAPI={this.getDataFromAPI} />}
+					render={ (props) => <SubmitCompany {...props} getDataFromAPI={this.getDataFromAPI} />}
 					/>
 
 				<Route
@@ -64,7 +65,7 @@ import {
 
         </Switch>
 
-        <Navbar />
+        <BotNavBar />
 
       </Router>
     );

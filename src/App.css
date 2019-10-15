@@ -4,41 +4,46 @@ body {
 
 @media (max-width: 766px) {
   .inputBox{
-      max-width: 50vw;
-      min-width: 50vw;
-}
+      max-width: 90vw;
+      min-width: 90vw;
+  }
+  #sideNav {
+    display: none;
+  }
 
 }
 @media (min-width: 767px) {
-.inputBox {
-  max-width: 35vw;
-  min-width: 35vw;
+  .inputBox {
+    max-width: 35vw;
+    min-width: 35vw;
+  }
+  .MuiBottomNavigationAction-root {
+    display: none !important;
+  }
 }
 
+/* Desktop Top Nav */
+.MuiPaper-root {
+  background-color: #376e6f !important;
+  color: #DEF2F1 !important;
+}
+#linkedInIcon {
+  margin-right: 30px;
+}
+#linkedInIcon:hover {
+  color: #5085a5;
 }
 
-#newEntry {
-padding-top: 30px;
-display: flex;
-flex-wrap: wrap;
-margin: auto;
-justify-content: center;
+/* Submit Form */
+#submitEntry {
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: center;
 }
 
-#updateEntry{
-display: block;
-text-align: center;
-margin-top: 30px;
-color: #DEF2F1;
-font-family: 'Open Sans', sans-serif;
-font-weight: 600;
-list-style: none;
-}
-
-li span {
-  color: white;
-}
-
+/* Shared b/w forms */
 .inputBox {
   display: flex;
   margin: 10px auto;
@@ -51,29 +56,50 @@ li span {
   font-family: 'Open Sans', sans-serif;
 }
 
+/* Stored Companies */
 .listEntry {
+  padding-top: 10px;
   margin-top: 5px;
   border-radius: 3px;
 }
-
-
-#listOuter {
+#listStructure {
   display: flex;
   flex-wrap: wrap;
 }
+#outputDisplayBoxes {
+    border: 3px solid black;
+    border-radius: 10px;
+    min-width: 33vw;
+    min-height: 33vh;
+    margin: 5px auto;
+    padding: 0 20px 0 0;
+}
 
+/* Shared b/w ShowCompany & StoredCompanies */
+#companyEntry{
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #DEF2F1;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  list-style: none;
+}
+li span {
+  color: white;
+}
+
+/* Bot Nav Bar */
 #botNav {
   position: fixed;
   bottom: 0;
   width: 100vw;
 }
-
-
-#awayFromNav {
+#moveUpFromBotNav {
   padding-top: 100px;
-
 }
 
+/* Button Styling */
 .sortingButtons {
   border-radius: 3px;
   display: flex;
@@ -91,6 +117,7 @@ li span {
   font-weight: 600;
   color: #DEF2F1;
 }
+
 .sortingButtons button:hover {
   background-color: #5085a5;
 }
@@ -110,27 +137,20 @@ li span {
   background-color: #5085a5;
 }
 
-.move{
-  margin-top: 100px;
-}
-
-#outputDisplayBoxes {
-    border: 3px solid black;
-    border-radius: 10px;
-    min-width: 33vw;
-    min-height: 33vh;
-    overflow: scroll;
-    margin: 5px auto;
-    padding: 0 15px 0 0;
-}
-#list li {
-  color: #DEF2F1;
-  font-weight: 600;
-  list-style: none;
-}
-
 /* Fix Link tag underline w/o inline */
 a {
   text-decoration: none;
   color: #DEF2F1;
+}
+
+/* fix input number toggle */
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+/* Webkit browsers like Safari and Chrome */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }

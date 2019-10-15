@@ -57,7 +57,7 @@ class UpdateForm extends React.Component{
   };
     render(){
       return(
-        <div id="updatePage">
+        <div>
           <div>
             <input className="inputBox" onInput={this.onNameInput} placeholder="Name of Company" />
             <input list="eco" className="inputBox" onInput={this.onEcoInput} placeholder="Eco Programs?" />
@@ -73,7 +73,6 @@ class UpdateForm extends React.Component{
               <button onClick={this.updateClick}> Update Company</button>
             </Link>
           </div>
-
         </div>
       )
     }
