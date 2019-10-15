@@ -108,7 +108,7 @@ li span {
 
 .sortingButtons button {
   background-color: #376e6f;
-  border-color: black;
+  border-color: #DEF2F1;
   border-radius: 10px;
   padding: 5px;
   margin: 0px 10px 5px;
@@ -124,7 +124,7 @@ li span {
 
 .functionalButtons {
   background-color: #376e6f;
-  border-color: black;
+  border-color: #DEF2F1;
   border-radius: 5px;
   padding: 2px 5px;
   margin: 10px 5px 0;
