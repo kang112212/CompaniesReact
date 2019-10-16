@@ -7,18 +7,6 @@ import DragulaStyles from 'react-dragula/dist/dragula.min.css';
 
 class StoredCompanies extends React.Component {
 
-  moves: (element, container, handle) =>
-  {
-  	return handle.classList.contains('drag-handle-class');
-  }
-  const moveList = document.querySelectorAll('div.drag-handle-class');
-
-  if (moveList)
-  {
-  	moveList.forEach(move =>
-  	{
-  		move.addEventListener('touchmove', event => event.preventDefault());
-  	});
 
   companyHandleClick=(id)=>{
     fetch('https://powerful-tor-71755.herokuapp.com/company/' + id, {
@@ -61,10 +49,15 @@ class StoredCompanies extends React.Component {
   )}
   dragulaDecorator = (componentBackingInstance) => {
     if (componentBackingInstance) {
-      let options = { };
-      Dragula([componentBackingInstance], options);
-    }
-  };
+       let options = {
+         revertOnSpill: false,
+         removeOnSpill: false,
+         copy: false,
+         copySortSource: false
+       };
+       Dragula([componentBackingInstance], options)
+     }
+   };
 
 }
 
