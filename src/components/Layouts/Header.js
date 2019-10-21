@@ -1,7 +1,7 @@
 import React from 'react';
 import { AppBar, Toolbar, CssBaseline, makeStyles, useTheme } from '@material-ui/core/';
 import MapIcon from '@material-ui/icons/Map';
-
+import HomeIcon from '@material-ui/icons/Home';
 
 
 //Imports for material ui-drawer
@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "space-between",
   },
 bot: {
-  paddingBottom: "30px",
+  paddingBottom: "15px",
 },
 hide: {
   display: 'none',
@@ -122,7 +122,11 @@ export default function ElevateAppBar(props) {
             </div>
             <Divider />
               <List>
-                <ListItem button key={1} component={Link} to="/" onClick={handleDrawerClose}>
+                <ListItem button key={0} component={Link} to="/" onClick={handleDrawerClose}>
+                  <ListItemText primary={'Home Page'} />
+                  <ListItemIcon>{ <HomeIcon /> }</ListItemIcon>
+                </ListItem>
+                <ListItem button key={1} component={Link} to="/company" onClick={handleDrawerClose}>
                   <ListItemText primary={'Submit Companies'} />
                   <ListItemIcon>{ <BusinessIcon /> }</ListItemIcon>
                 </ListItem>

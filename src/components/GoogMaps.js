@@ -43,7 +43,7 @@ class MapContainer extends React.Component{
 
     ];
     return (
-      <div>
+      <div id="maps">
         <Map
           google={this.props.google}
           zoom={8}
@@ -76,5 +76,5 @@ class MapContainer extends React.Component{
 }
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyCRqsPOI5rcBUu8JuHqqd_f3FwxUALjXpk'
+  apiKey: 'AIzaSyBcMRpI6heBzu7SVrNzymY6LoLlGtFjBe4'
 })(MapContainer);

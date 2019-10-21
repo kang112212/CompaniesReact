@@ -4,9 +4,9 @@ import BotNavBar from './components/Layouts/BotNavBar';
 import UpdateCompany from './components/Pages/UpdateCompany';
 import SubmitCompany from './components/Pages/SubmitCompany';
 import StoredCompanies from './components/Pages/StoredCompanies';
-import GoogMaps from './components/GoogMaps'
-
-
+import GoogMaps from './components/GoogMaps';
+import HomePage from './components/Pages/Homepage';
+import Footer from './components/Layouts/Footer'
 
 
 import {
@@ -59,6 +59,12 @@ import {
 				<Route
 					exact
 					path="/"
+					render={ (props) => <HomePage />}
+					/>
+
+				<Route
+					exact
+					path="/company"
 					render={ (props) => <SubmitCompany {...props} getDataFromAPI={this.getDataFromAPI} />}
 					/>
 
@@ -81,8 +87,9 @@ import {
         </Switch>
 
         <BotNavBar />
-
+				<Footer />
       </Router>
+
     );
 	}}
 

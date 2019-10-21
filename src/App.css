@@ -1,5 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet');
+
 body {
-  background-color: #2F4454 !important;
+  background-color: #2f5e5f !important;
+}
+
+#homePage {
+  height: 82vh;
+  width: 100%;
+  background-image: url("./components/space.jpg");
+  background-size: 100% 100%;
+  background: cover;
+  background-repeat: no-repeat;
 }
 
 @media (max-width: 766px) {
@@ -28,18 +39,15 @@ body {
   color: #DEF2F1 !important;
 }
 
-#linkedInIcon {
-
-}
 #linkedInIcon:hover {
   color: #5085a5;
 }
 
 /* Submit Form */
 #submitEntry {
-  padding-top: 50px;
+  padding-top: 30px;
+  margin-bottom: 100px;
 }
-
 /* Shared b/w forms */
 .inputBox {
   display: flex;
@@ -62,14 +70,16 @@ body {
 #listStructure {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 100px;
 }
 #outputDisplayBoxes {
     border: 3px solid black;
     border-radius: 10px;
     min-width: 33vw;
     min-height: 33vh;
-    margin: 5px auto;
+    margin: 5px auto; 
     padding: 0 20px 0 0;
+    box-shadow: 5px 5px 10px #000000;
 }
 
 /* Shared b/w ShowCompany & StoredCompanies */
@@ -82,20 +92,30 @@ body {
   font-weight: 600;
   list-style: none;
 }
+/* Update box */
+#updateBox {
+  margin-bottom: 100px;
+}
 li span {
   color: white;
 }
 
+#maps {
+  margin-top: 30px;
+
+}
 /* Bot Nav Bar */
 #botNav {
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
+  position: fixed;
+  height: 80px;
+  bottom: 10px;
+  width: 100%;
 }
-#moveUpFromBotNav {
-  padding-top: 100px;
+#foot{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
-
 
 /* Button Styling */
 .sortingButtons {
@@ -109,7 +129,7 @@ li span {
   border-color: #DEF2F1;
   border-radius: 10px;
   padding: 5px;
-  margin: 0px 10px 5px;
+  margin: 30px 10px 5px 0;
   font-size: 12px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;

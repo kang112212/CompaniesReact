@@ -20,7 +20,7 @@ export default function Footer() {
   const classes = useStyles()
 
   return (
-    <footer className={classes.footer}>
+    <footer id ="foot" className={classes.footer}>
       <div className={classes.footer}>
         <CopyrightIcon className={classes.icons} /> <span> TIL 2019 | Corey Hawkins | </span>
         <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/corey-hawkins-webdev/" >

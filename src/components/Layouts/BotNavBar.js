@@ -2,17 +2,17 @@ import React from 'react';
 import { makeStyles, BottomNavigation, BottomNavigationAction } from '@material-ui/core';
 import BusinessIcon from '@material-ui/icons/Business';
 import ViewListIcon from '@material-ui/icons/ViewList';
-import CopyrightIcon from '@material-ui/icons/Copyright';
 import { Link } from "react-router-dom";
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import Footer from './Footer'
 import MapIcon from '@material-ui/icons/Map';
+import HomeIcon from '@material-ui/icons/Home';
 
 
 
 const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: "#1c3334",
+  },
+  icons: {
     color: "#DA7B93",
     fontFamily: "Garamond",
   },
@@ -20,29 +20,26 @@ const useStyles = makeStyles(theme => ({
 
 export default function BotNavBar() {
   const classes = useStyles()
-  const [value, setValue] = React.useState('folder');
+  const [value, setValue] = React.useState('home');
 
   function handleChange(event, newValue) {
     setValue(newValue);
   }
 
 return (
-  <div id="moveUpFromBotNav">
-    <div id="botNav">
       <BottomNavigation
+        id="botNav"
         value={value} onChange={handleChange}
         showLabels
         className={classes.root} >
 
-        <BottomNavigationAction className={classes.root} label="Submit Company" value="folder" icon={<BusinessIcon  />}  component={Link} to="/" />
+        <BottomNavigationAction className={classes.icons}  label="HomePage " value="home" icon={<HomeIcon  />}  component={Link} to="/" />
 
-        <BottomNavigationAction className={classes.root} label="Companies" value="storage" icon={<ViewListIcon />}  component={Link} to="/companies" />
+        <BottomNavigationAction className={classes.icons}  label="Submit" value="folder" icon={<BusinessIcon  />}  component={Link} to="/company" />
 
-        <BottomNavigationAction className={classes.root} label="Maps" value="maps" icon={<MapIcon />}  component={Link} to="/maps" />
+        <BottomNavigationAction className={classes.icons}  label="Companies" value="storage" icon={<ViewListIcon />}  component={Link} to="/companies" />
+        <BottomNavigationAction className={classes.icons}  label="Maps" value="maps" icon={<MapIcon />}  component={Link} to="/maps" />
 
       </BottomNavigation>
-      <Footer />
-    </div>
-  </div>
   )
 }

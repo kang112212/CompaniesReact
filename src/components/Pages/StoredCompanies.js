@@ -32,7 +32,7 @@ class StoredCompanies extends React.Component {
   			      <li className="listEntry">Personal Rating:<span> {company.oneToTenRating}</span></li>
 
               <Link to={"/company/" + company.id}>
-              <button className="functionalButtons">Update</button>
+                <button className="functionalButtons">Update</button>
               </Link>
 
   						<button className="functionalButtons" onClick={()=>this.companyHandleClick(company.id)}>Delete</button>
