@@ -20,7 +20,6 @@ body {
   .MuiBottomNavigationAction-root {
     display: none !important;
   }
-
 }
 
 /* Desktop Top Nav */
@@ -28,8 +27,9 @@ body {
   background-color: #376e6f !important;
   color: #DEF2F1 !important;
 }
+
 #linkedInIcon {
-  margin-right: 30px;
+
 }
 #linkedInIcon:hover {
   color: #5085a5;
@@ -38,10 +38,6 @@ body {
 /* Submit Form */
 #submitEntry {
   padding-top: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  margin: auto;
-  justify-content: center;
 }
 
 /* Shared b/w forms */
@@ -92,13 +88,14 @@ li span {
 
 /* Bot Nav Bar */
 #botNav {
-  position: fixed;
-  bottom: 0;
-  width: 100vw;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
 }
 #moveUpFromBotNav {
   padding-top: 100px;
 }
+
 
 /* Button Styling */
 .sortingButtons {
@@ -141,7 +138,7 @@ li span {
 /* Fix Link tag underline w/o inline */
 a {
   text-decoration: none;
-  color: #DEF2F1;
+  color: #DA7B93;
 }
 
 /* fix input number toggle */

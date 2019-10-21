@@ -2,7 +2,13 @@ import React from 'react';
 import { makeStyles, BottomNavigation, BottomNavigationAction } from '@material-ui/core';
 import BusinessIcon from '@material-ui/icons/Business';
 import ViewListIcon from '@material-ui/icons/ViewList';
+import CopyrightIcon from '@material-ui/icons/Copyright';
 import { Link } from "react-router-dom";
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import Footer from './Footer'
+import MapIcon from '@material-ui/icons/Map';
+
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -22,17 +28,21 @@ export default function BotNavBar() {
 
 return (
   <div id="moveUpFromBotNav">
-    <BottomNavigation
-      id="botNav"
-      value={value} onChange={handleChange}
-      showLabels
-      className={classes.root} >
+    <div id="botNav">
+      <BottomNavigation
+        value={value} onChange={handleChange}
+        showLabels
+        className={classes.root} >
 
-      <BottomNavigationAction className={classes.root} label="Submit Company" value="folder" icon={<BusinessIcon  />}  component={Link} to="/company" />
+        <BottomNavigationAction className={classes.root} label="Submit Company" value="folder" icon={<BusinessIcon  />}  component={Link} to="/" />
 
-      <BottomNavigationAction className={classes.root} label="Companies" value="storage" icon={<ViewListIcon />}  component={Link} to="/companies" />
+        <BottomNavigationAction className={classes.root} label="Companies" value="storage" icon={<ViewListIcon />}  component={Link} to="/companies" />
 
-    </BottomNavigation>
+        <BottomNavigationAction className={classes.root} label="Maps" value="maps" icon={<MapIcon />}  component={Link} to="/maps" />
+
+      </BottomNavigation>
+      <Footer />
+    </div>
   </div>
   )
 }

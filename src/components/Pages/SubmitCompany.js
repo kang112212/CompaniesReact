@@ -12,7 +12,7 @@ constructor(props, getDataFromAPI){
 
   render(){
 		return (
-      <div>
+      <div id="submitPage">
   			<SubmitForm {...this.props} getDataFromAPI={this.props.getDataFromAPI} />
       </div>
 		)

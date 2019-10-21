@@ -1,6 +1,8 @@
 import React from 'react';
 import { AppBar, Toolbar, CssBaseline, makeStyles, useTheme } from '@material-ui/core/';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import MapIcon from '@material-ui/icons/Map';
+
+
 
 //Imports for material ui-drawer
 import Drawer from '@material-ui/core/Drawer';
@@ -25,13 +27,10 @@ const drawerWidth = 240;
 const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: "#376e6f",
+    display: "flex",
+    color: "#DEF2F1",
+    justifyContent: "space-between",
   },
-  head:{
-  display: "flex",
-  margin: "0px auto",
-  color: "#DEF2F1",
-  textAlign: "center",
-},
 bot: {
   paddingBottom: "30px",
 },
@@ -102,13 +101,10 @@ export default function ElevateAppBar(props) {
             >
               <MenuIcon />
             </IconButton>
-
-            <div className={classes.head}> <h1>Business Log</h1> </div>
-
-            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/corey-hawkins-webdev/" >
-              <LinkedInIcon id="linkedInIcon" />
-            </a>
+            <div> <h1>TIL</h1> </div>
+            <div className="gcse-search"></div>
           </Toolbar>
+
         </AppBar>
           <Drawer
             className={classes.drawer}
@@ -126,13 +122,17 @@ export default function ElevateAppBar(props) {
             </div>
             <Divider />
               <List>
-                <ListItem button key={1} component={Link} to="/company" onClick={handleDrawerClose}>
+                <ListItem button key={1} component={Link} to="/" onClick={handleDrawerClose}>
                   <ListItemText primary={'Submit Companies'} />
                   <ListItemIcon>{ <BusinessIcon /> }</ListItemIcon>
                 </ListItem>
                 <ListItem button key={2} component={Link} to="/companies"  onClick={handleDrawerClose}>
                   <ListItemText primary={'Companies'} />
                   <ListItemIcon>{ <ViewListIcon/> }</ListItemIcon>
+                </ListItem>
+                <ListItem button key={3} component={Link} to="/maps"  onClick={handleDrawerClose}>
+                  <ListItemText primary={'Maps'} />
+                  <ListItemIcon>{ <MapIcon /> }</ListItemIcon>
                 </ListItem>
               </List>
             <Divider />

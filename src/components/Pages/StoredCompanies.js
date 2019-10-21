@@ -5,6 +5,7 @@ import SortButtons from '../SortButtons';
 import Dragula from 'react-dragula';
 import DragulaStyles from 'react-dragula/dist/dragula.min.css';
 
+
 class StoredCompanies extends React.Component {
 
 

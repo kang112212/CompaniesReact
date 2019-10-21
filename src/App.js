@@ -4,6 +4,7 @@ import BotNavBar from './components/Layouts/BotNavBar';
 import UpdateCompany from './components/Pages/UpdateCompany';
 import SubmitCompany from './components/Pages/SubmitCompany';
 import StoredCompanies from './components/Pages/StoredCompanies';
+import GoogMaps from './components/GoogMaps'
 
 
 
@@ -38,6 +39,14 @@ import {
 			componentDidMount(){
 			  this.getDataFromAPI();
 				this.getTrueFromAPI();
+				(function() {
+				 var gcse = document.createElement('script');
+				 gcse.type = 'text/javascript';
+				 gcse.async = true;
+				 gcse.src = 'https://cse.google.com/cse.js?cx=007726935285128110588:cbum7heosei';
+				 var s = document.getElementsByTagName('script')[0];
+				 s.parentNode.insertBefore(gcse, s);
+			 })();
 			}
 			render(){
     return (
@@ -49,7 +58,7 @@ import {
 
 				<Route
 					exact
-					path="/company"
+					path="/"
 					render={ (props) => <SubmitCompany {...props} getDataFromAPI={this.getDataFromAPI} />}
 					/>
 
@@ -62,6 +71,12 @@ import {
 				path="/companies"
 				render={ props => <StoredCompanies companies={this.state.companies} getTrueFromAPI={this.getTrueFromAPI} getDataFromAPI={this.getDataFromAPI} /> }
 				 />
+
+				 <Route
+				 path="/maps"
+				 render={ props => <GoogMaps  /> }
+					/>
+
 
         </Switch>
 
